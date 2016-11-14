@@ -1,6 +1,18 @@
 {
-  "scripts": {
-    "test": "gulp test"
+   "name": "webdriverio-blog-example",
+   "version": "1.0.0",
+   "description": "WebdriverIO Blog Example",
+   "scripts": {
+     "test": "gulp test"
+  },
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/EastCoastProduct/webdriverio-blog-example"
+   },
+   "author": "Ana Prpic",
+   "license": "ISC",
+   "bugs": {
+     "url": "https://github.com/EastCoastProduct/webdriverio-blog-example"
   },
   "dependencies": {
     "selenium-standalone": "^2.44.0",
@@ -21,9 +33,7 @@
     "wdio-spec-reporter": "0.0.3"
   },
   "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "presets": ["es2015"]
   },
   "env": {
     "es6": true
