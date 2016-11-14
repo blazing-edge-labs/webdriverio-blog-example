@@ -1,2 +1,9 @@
+#Dependency directory
 node_modules/
+
+#Logs
+*.log*
+*.log
+
 .DS_Store/
+./errorShots/

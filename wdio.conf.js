@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -32,19 +32,20 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
+      browserName: 'firefox',
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+      maxInstances: 1,
         //
-        browserName: 'firefox'
+
     }],
     //
     // ===================
@@ -68,7 +69,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'https://boston.craigslist.org/',
+    baseUrl: 'https://accounts.craigslist.org',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -122,7 +123,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'tdd',
-        compilers: ['js:babel-register']
+        compilers: ['js:babel-register'],
+        timeout: 20000
     },
     //
     // =====
@@ -140,12 +142,12 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
     before: function (capabilities, specs) {
-      var chai = require ('chai');
-      global.should = chai.Should();
+      var chai = require('chai');
+      global.expect = chai.expect;
+      chai.Should();
 
       //global variables
-      global.globalUsername = 'testUsername';
-      global.globalPassword = 'testPass135!';
+      global.globalPassword = 'Testpass135!';
       global.globalEmail = 'ana+example@ecp.io';
 
     },

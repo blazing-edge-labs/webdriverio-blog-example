@@ -11,12 +11,19 @@
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-wdio": "^1.0.4",
     "gulp-webdriver": "^2.0.2",
+    "lodash": "^4.17.0",
     "mocha": "^3.1.2",
     "wdio-allure-reporter": "^0.1.2",
     "wdio-mocha-framework": "^0.5.3",
     "wdio-selenium-standalone-service": "0.0.7",
     "wdio-spec-reporter": "0.0.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "env": {
     "es6": true

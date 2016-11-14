@@ -1,31 +1,32 @@
 'use strict';
+import _ from 'lodash';
 
 const defaults = {
-
-   username: globalUsername,
-   password: globalPassword,
-   email: globalEmail
+   email: globalEmail,
+   password: globalPassword
 };
 
-module.exports = (user, pass) => {
-
+module.exports = (options) => {
    const opts = _.assign({}, defaults, options);
 
       return {
 
-         addNew: () => {
-
+         login: () => {
             browser
-               .click('a[href="https://accounts.craigslist.org/login/home')
+               .url('/login/home')
                .waitForVisible('.accountform-btn');
 
             browser
-               .setValue('#emailAddress', opts.globalEmail)
-               .click('button=SAVE PMS SETTINGS')
-               .waitForVisible('span[title="Edit"]');
+               .setValue('#inputEmailHandle', opts.email)
+               .setValue('#inputPassword', opts.password)
+               .click('.accountform-btn')
+               .waitForVisible('#ef'); //span containing the 'log out' option
          },
 
-         login: () => {
-
+         logout: () => {
+            browser
+               .url('/logout')
+               .waitForVisible('button=Log in');
          }
+   };
 };
