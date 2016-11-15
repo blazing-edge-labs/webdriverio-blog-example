@@ -11,9 +11,6 @@
    },
    "author": "Ana Prpic",
    "license": "ISC",
-   "bugs": {
-     "url": "https://github.com/EastCoastProduct/webdriverio-blog-example"
-  },
   "dependencies": {
     "selenium-standalone": "^2.44.0",
     "webdriverio": "^4.1.1"

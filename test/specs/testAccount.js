@@ -2,7 +2,7 @@
 
 import account from '../helpers/account.js';
 
-suite('Test the Login Functionality', () => {
+suite('Test the Login Functionality using helper functions - ', () => {
 	test('Test the user login', () => {
 
       account().login(); //defaults to globals

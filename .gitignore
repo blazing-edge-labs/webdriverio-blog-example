@@ -6,7 +6,7 @@ node_modules/
 *.log
 
 .DS_Store/
-./errorShots/
+errorShots/
 sync.sh
 
 #Test results directory
