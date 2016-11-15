@@ -5,11 +5,21 @@ var Page = require('./page');
 
 var LoginPage = Object.create(Page, {
 
-   username: { get: function () { return browser.element('#inputEmailHandle'); } },
-   password: { get: function () { return browser.element('#inputPassword'); } },
-   loginButton: { get: function () { return browser.element('.accountform-btn'); } },
-   error: { get: function () { return browser.element('.alert-error'); } },
-   confirm: { get: function() { return browser.element('.bchead>a:nth-of-type(2)'); } },
+   username: { get: function () {
+      return browser.element('#inputEmailHandle'); }
+   },
+   password: { get: function () {
+      return browser.element('#inputPassword'); }
+   },
+   loginButton: { get: function () {
+      return browser.element('.accountform-btn'); }
+   },
+   loginError: { get: function () {
+      return browser.element('.alert-error'); }
+   },
+   confirmLogin: { get: function() {
+      return browser.element('.bchead>a:nth-of-type(2)'); }
+   },
 
    open: { value: function() {
       Page.open.call(this, '/home/login');

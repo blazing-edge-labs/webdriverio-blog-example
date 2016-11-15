@@ -1,13 +1,8 @@
-#Dependency directory
 node_modules/
-
-#Logs
-*.log*
-*.log
-
-.DS_Store/
 errorShots/
-sync.sh
-
-#Test results directory
 allure-results/
+sync.sh
+one_sync.sh
+*.log
+.DS_Store/
+*.log*

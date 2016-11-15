@@ -27,6 +27,16 @@ module.exports = (options) => {
             browser
                .url('/logout')
                .waitForVisible('button=Log in');
+         },
+
+         forgotPassword: () => {
+            browser
+               .url('/reset')
+               .waitForVisible('#email');
+
+            browser
+               .setValue('#email', opts.email)
+               .click('.accountform-btn');
          }
    };
 };

@@ -13,11 +13,22 @@ suite('Test the Login Functionality using helper functions - ', () => {
 
    });
 
-   test('Test user logout', () => {
+   test('Test Logout', () => {
 
       account().logout();
 
       browser.getTitle().should.be.equal('craigslist - account log in');
+
+   });
+
+   test('Test Forgot Password Functionality', () => {
+
+      const someEmail = 'some.email@email.com';
+
+      account({email: someEmail}).forgotPassword();
+
+      browser.getText('.alert-success').should.be.equal('A link to create a new password has been emailed to '
+         + someEmail + '.');
 
    });
 

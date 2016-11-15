@@ -11,7 +11,7 @@ suite('Test Login Functionality using Page Objects - ', () => {
       LoginPage.loginClick();
       browser.waitForVisible('.alert-error');
 
-      LoginPage.error.getText().should.contain('Your email address, handle or password is incorrect. Please try again.');
+      LoginPage.loginError.getText().should.contain('Your email address, handle or password is incorrect. Please try again.');
    });
 
    test('Test the Login Form with correct credentials', () => {
@@ -19,10 +19,12 @@ suite('Test Login Functionality using Page Objects - ', () => {
       LoginPage.open();
       LoginPage.login(globalEmail, globalPassword);
 
-      LoginPage.confirm.getText().should.contain('home of ' + globalEmail);
+      LoginPage.confirmLogin.getText().should.contain('home of ' + globalEmail);
     });
 
-   //  test('Test forgot password', () => {
-    //
-   //  });
+    test('Test forgot password', () => {
+
+      
+
+    });
 });
