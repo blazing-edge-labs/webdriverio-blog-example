@@ -25,6 +25,7 @@ suite('Test the Login Functionality using helper functions - ', () => {
 
       const someEmail = 'some.email@email.com';
       account({email: someEmail}).forgotPassword();
+      browser.waitForVisible('.alert-success');
 
       browser.getText('.alert-success').should.be.equal('A link to create a new'
          + ' password has been emailed to ' + someEmail + '.');

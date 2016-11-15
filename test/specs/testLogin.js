@@ -1,6 +1,8 @@
 'use strict';
 
 var LoginPage = require('../pageObjects/loginPage');
+var ForgotPasswordPage = require('../pageObjects/forgotPasswordPage');
+var HomePage = require('../pageObjects/homePage');
 
 suite('Test Login Functionality using Page Objects - ', () => {
    test('Test the Login Form with incorrect credentials', () => {
@@ -21,11 +23,22 @@ suite('Test Login Functionality using Page Objects - ', () => {
       LoginPage.login(globalEmail, globalPassword);
 
       LoginPage.confirmLogin.getText().should.contain('home of ' + globalEmail);
+
+      HomePage.logout();
+
+      LoginPage.loginButton.getText().should.be.equal('Log in');
+
     });
 
     test('Test forgot password', () => {
 
+      const mail = 'some@email.com';
+      ForgotPasswordPage.open();
+      ForgotPasswordPage.enterEmail(mail);
+      ForgotPasswordPage.resetButtonClick();
 
+      ForgotPasswordPage.confirm.getText().should.contain('A link to create a '
+         + 'new password has been emailed to ' + mail + '.');
 
     });
 });

@@ -1,4 +1,3 @@
-// login.page.js
 'use strict';
 
 var Page = require('./page');
@@ -6,20 +5,23 @@ var Page = require('./page');
 var LoginPage = Object.create(Page, {
 
    username: { get: function () {
-      return browser.element('#inputEmailHandle'); }
-   },
+      return browser.element('#inputEmailHandle');
+   } },
    password: { get: function () {
-      return browser.element('#inputPassword'); }
-   },
+      return browser.element('#inputPassword');
+   } },
    loginButton: { get: function () {
-      return browser.element('.accountform-btn'); }
-   },
+      return browser.element('button=Log in');
+   } },
+   createAccount: { get: function () {
+      return browser.element('button=Create account');
+   } },
    loginError: { get: function () {
-      return browser.element('.alert-error'); }
-   },
+      return browser.element('.alert-error');
+   } },
    confirmLogin: { get: function() {
-      return browser.element('.bchead>a:nth-of-type(2)'); }
-   },
+      return browser.element('.bchead>a:nth-of-type(2)');
+   } },
 
    open: { value: function() {
       Page.open.call(this, '/home/login');
