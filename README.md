@@ -23,7 +23,7 @@ The postinstall script will automatically install the [Selenium Standalone serve
 
 Now, install gulp globally 
 ```
-npm install gulp -g
+npm install -g gulp
 ```
 and the environment is set up!
 
