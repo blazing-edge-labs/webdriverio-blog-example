@@ -13,12 +13,11 @@ Then, the easiest way to start is to clone this repository and install its depen
 
 ```
 clone https://github.com/EastCoastProduct/webdriverio-blog-example.git
-```
-```
 cd webdriverio-blog-example
-```
+npm install
+``` 
 
-Next, type ```npm install``` in the command line. This will install all the packages needed for running the checking scripts locally.
+This will install all the packages needed for running the checking scripts locally.
 
 The postinstall script will automatically install the [Selenium Standalone server](https://www.npmjs.com/package/selenium-standalone) and browser drivers (drivers available for chrome, internet explorer, firefox and phantomjs). Only the Chrome and Firefox drivers get installed by default.
 
