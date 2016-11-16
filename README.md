@@ -21,7 +21,11 @@ This will install all the packages needed for running the checking scripts local
 
 The postinstall script will automatically install the [Selenium Standalone server](https://www.npmjs.com/package/selenium-standalone) and browser drivers (drivers available for chrome, internet explorer, firefox and phantomjs). Only the Chrome and Firefox drivers get installed by default.
 
-Now, install gulp globally ```npm install gulp -g``` and the environment is set up!
+Now, install gulp globally 
+```
+npm install gulp -g
+```
+and the environment is set up!
 
 ##Seting up the configuration file
 
