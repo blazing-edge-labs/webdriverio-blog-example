@@ -19,7 +19,7 @@ npm install
 
 This will install all the packages needed for running the checking scripts locally.
 
-The postinstall script will automatically install the [Selenium Standalone server](https://www.npmjs.com/package/selenium-standalone) and browser drivers (drivers available for chrome, internet explorer, firefox and phantomjs). Only the Chrome and Firefox drivers get installed by default.
+The postinstall script will automatically install the [Selenium Standalone server](http://www.seleniumhq.org/download/) and browser drivers (drivers available for chrome, internet explorer, firefox and phantomjs). Only the Chrome and Firefox drivers get installed by default.
 
 Now, install gulp globally 
 ```
