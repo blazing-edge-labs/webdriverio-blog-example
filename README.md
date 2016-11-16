@@ -29,7 +29,11 @@ and the environment is set up!
 
 ##Seting up the configuration file
 
-If you've cloned the repo, then you have my *wdio.conf.js* and you don't need to set it up. If you want to set it up differently, type```wdio config``` into the command line and answer the questions about your project.
+If you've cloned the repo, then you have my *wdio.conf.js* and you don't need to set it up. If you want to set it up differently, type
+```
+wdio config
+```
+into the command line and answer the questions about your project.
 
 ##Running the scripts
 
