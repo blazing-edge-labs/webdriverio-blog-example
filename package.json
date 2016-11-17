@@ -6,9 +6,10 @@
      "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
      "pretest": "npm run cleanup",
      "test": "./node_modules/.bin/gulp test",
-     "report": "./node_modules/.bin/allure generate allure-results && ./node_modules/.bin/allure report open",
+     "report": "./node_modules/.bin/allure generate allure-results",
      "posttest": "npm run report",
-     "postinstall": "./node_modules/.bin/selenium-standalone install"
+     "postinstall": "./node_modules/.bin/selenium-standalone install",
+     "view-report": "allure report open"
   },
   "repository": {
      "type": "git",
