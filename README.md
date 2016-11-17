@@ -12,8 +12,7 @@ First, you need to install [Node.js](https://nodejs.org/en/).
 Then, the easiest way to start is to clone this repository and install its dependencies:
 
 ```
-clone https://github.com/EastCoastProduct/webdriverio-blog-example.git
-cd webdriverio-blog-example
+clone https://github.com/EastCoastProduct/webdriverio-blog-example.git && cd webdriverio-blog-example
 npm install
 ``` 
 
