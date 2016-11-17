@@ -1,6 +1,7 @@
 node_modules/
 errorShots/
 allure-results/
+allure-report/
 sync.sh
 one_sync.sh
 *.log
