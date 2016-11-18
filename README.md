@@ -38,7 +38,15 @@ into the command line and answer the questions about your project.
 
 Type ```gulp test``` in the project folder command line to start the automated checking scripts.
 
-In the *package.json* file, under "scripts", I added a few handy scripts that do a log cleanup from previous checks (delete the report, results and error folders) and build and open a report after the checks finish running. I had to separate the commands that generate the report (```allure generate allure-results```) and open it (```allure report open```), because it fails the CI (the environment doesn't support the opening of a browser). But, if you're going to run the checks locally, without a CI tool, you can combine the two tasks into one like this:
+###package.json file
+
+As seen from the *package.json* file, there are multiple other scripts that are run either automatically or manually.
+
+* ```"cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots"``` deletes folders with files from previous checks (the results, report and error folders) and runs automatically before every new checking run 
+* ```"report": "allure generate allure-results"``` builds a report from the checking log files saved to the ```./allure-results``` folder
+* ```"view-report": "allure report open"``` opens the generated report in the browser. It was made to be run manually, because if run in CI env, it fails (the environment doesn't support the opening of a browser). 
+
+However, if you're going to run the checks locally, without a CI tool, you can combine the two tasks into one like this:
 
 ```javascript
 "scripts": {
@@ -51,3 +59,4 @@ In the *package.json* file, under "scripts", I added a few handy scripts that do
 },
 ```
 
+One cool thing I learned while setting up this repo is the npm's feature that any script has a set of pre- and post- hooks. I've used them in a way that when ```npm test``` is executed, npm will immediately run the ```npm pretest``` script, run the ```npm test``` and, finally, the ```npm run posttest```.
