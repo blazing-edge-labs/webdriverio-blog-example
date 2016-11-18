@@ -40,15 +40,14 @@ Type ```gulp test``` in the project folder command line to start the automated c
 
 In the *package.json* file, under "scripts", I added a few handy scripts that do a log cleanup from previous checks (delete the report, results and error folders) and build and open a report after the checks finish running. I had to separate the commands that generate the report (```allure generate allure-results```) and open it (```allure report open```), because it fails the CI (the environment doesn't support the opening of a browser). But, if you're going to run the checks locally, without a CI tool, you can combine the two tasks into one like this:
 
-```
-javascript
-   "scripts": {
-     "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
-     "pretest": "npm run cleanup",
-     "test": "./node_modules/.bin/gulp test",
-     "report": "allure generate allure-results && allure report open",
-     "posttest": "npm run report",
-     "postinstall": "./node_modules/.bin/selenium-standalone install"
-  },
+```javascript
+"scripts": {
+  "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+  "pretest": "npm run cleanup",
+  "test": "./node_modules/.bin/gulp test",
+  "report": "allure generate allure-results && allure report open",
+  "posttest": "npm run report",
+  "postinstall": "./node_modules/.bin/selenium-standalone install"
+},
 ```
 
