@@ -45,7 +45,7 @@ One cool thing I learned while setting up this repo is the npm's feature that an
 ```javascript
 {
    "scripts": {
-     "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
+     "cleanup": "rm -rf ./allure-report && rm -rf ./errorShots",
      "pretest": "npm run cleanup",
      "test": "./node_modules/.bin/gulp test",
      "report": "./node_modules/.bin/allure generate allure-results",
@@ -55,7 +55,7 @@ One cool thing I learned while setting up this repo is the npm's feature that an
   },
 ```
 
-* ```"cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots"``` deletes folders with files from previous checks (the results, report and error folders) and runs automatically before every new checking run
+* ```"cleanup": "rm -rf ./allure-report && rm -rf ./errorShots"``` deletes folders with the report from a previous check and the errorShots folder, runs automatically before every new checking run
 * ```"report": "allure generate allure-results"``` builds a report from the checking log files saved to the ```./allure-results``` folder
 * ```"view-report": "allure report open"``` opens the generated report in the browser. It was made to be run manually, because if run in CI env, it fails (the environment doesn't support the opening of a browser)
 
