@@ -1,5 +1,5 @@
 
-# WebdriverIO Examples 
+# WebdriverIO Examples
 
 [![CircleCI](https://circleci.com/gh/EastCoastProduct/webdriverio-blog-example.svg?style=svg)](https://circleci.com/gh/EastCoastProduct/webdriverio-blog-example)
 
@@ -14,13 +14,13 @@ Then, the easiest way to start is to clone this repository and install its depen
 ```
 clone https://github.com/EastCoastProduct/webdriverio-blog-example.git && cd webdriverio-blog-example
 npm install
-``` 
+```
 
 This will install all the packages needed to run the checking scripts locally.
 
 The postinstall script will automatically install the [Selenium Standalone server](http://www.seleniumhq.org/download/) and browser drivers (drivers available for Chrome, Internet Explorer, Firefox and PhantomJS). Only the Chrome and Firefox drivers get installed by default.
 
-Now, install gulp globally 
+Now, install gulp globally
 ```
 npm install -g gulp
 ```
@@ -28,7 +28,7 @@ and the environment is set up!
 
 ##Setting up the configuration file
 
-If you've cloned the repo, then you have my *wdio.conf.js* and you don't need to set it up. If you want to customize the configurnation file, type
+If you've cloned the repo, then you have my *wdio.conf.js* and you don't need to set it up. If you want to customize the configuration file, type
 ```
 wdio config
 ```
@@ -51,4 +51,3 @@ javascript
      "postinstall": "./node_modules/.bin/selenium-standalone install"
   },
 ```
-

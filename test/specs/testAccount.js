@@ -2,8 +2,12 @@
 
 import account from '../helpers/account.js';
 
-suite('Test the Login Functionality using helper functions - ', () => {
+suite.only('Test the Login Functionality using helper functions - ', () => {
 	test('Test the user login', () => {
+
+      browser
+         .url('/login/home')
+         .waitForVisible('.accountform-btn');
 
       account().login(); //defaults to globals
 

@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/*.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -32,20 +32,19 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 1,
+    maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-      browserName: 'firefox',
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-      maxInstances: 1,
+        maxInstances: 1,
         //
-
+        browserName: 'firefox'
     }],
     //
     // ===================
@@ -59,7 +58,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    logLevel: 'command',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -116,15 +115,14 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['spec','allure'],
+    reporters: ['dot','allure'],
 
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'tdd',
-        compilers: ['js:babel-register'],
-        timeout: 20000
+        compilers: ['js:babel-register']
     },
     //
     // =====
@@ -142,14 +140,13 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
     before: function (capabilities, specs) {
-      var chai = require('chai');
-      global.expect = chai.expect;
-      chai.Should();
+      var chai = require ('chai');
+    	global.expect = chai.expect;
+    	chai.Should();
 
       //global variables
       global.globalPassword = 'Testpass135!';
       global.globalEmail = 'ana+example@ecp.io';
-
     },
     //
     // Hook that gets executed before the suite starts
