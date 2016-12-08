@@ -6,8 +6,3 @@ import webdriver from 'gulp-webdriver';
 gulp.task('test', () => {
     return gulp.src('wdio.conf.js').pipe(webdriver());
 });
-
-// Watch Files For Changes
-gulp.task('watch', () => {
-    gulp.watch('./test/specs/*.js', ['test']);
-});

@@ -22,7 +22,7 @@ suite('Test Login Functionality using Page Objects - ', () => {
       LoginPage.open();
       LoginPage.login(globalEmail, globalPassword);
 
-      LoginPage.confirmLogin.getText().should.contain('home of ' + globalEmail);
+      LoginPage.confirmLogin.isVisible();
 
       HomePage.logout();
 

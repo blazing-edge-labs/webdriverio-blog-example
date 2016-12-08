@@ -2,7 +2,7 @@
 
 import account from '../helpers/account.js';
 
-suite.only('Test the Login Functionality using helper functions - ', () => {
+suite('Test the Login Functionality using helper functions - ', () => {
 	test('Test the user login', () => {
 
       browser
@@ -12,7 +12,7 @@ suite.only('Test the Login Functionality using helper functions - ', () => {
       account().login(); //defaults to globals
 
       browser.getTitle().should.be.equal('craigslist account');
-      browser.getText('.bchead>a:nth-of-type(2)').should.be.equal('home of '
+      browser.getText('.account-header>a')[1].should.be.equal('home of '
          + globalEmail);
 
    });

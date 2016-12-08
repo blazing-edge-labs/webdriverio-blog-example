@@ -20,7 +20,7 @@ var LoginPage = Object.create(Page, {
       return browser.element('.alert-error');
    } },
    confirmLogin: { get: function() {
-      return browser.element('.bchead>a:nth-of-type(2)');
+      return browser.element('#searchlegend');
    } },
 
    open: { value: function() {

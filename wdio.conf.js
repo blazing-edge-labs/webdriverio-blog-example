@@ -45,6 +45,7 @@ exports.config = {
         maxInstances: 1,
         //
         browserName: 'firefox'
+        //browserName: 'chrome'
     }],
     //
     // ===================
@@ -143,6 +144,7 @@ exports.config = {
       var chai = require ('chai');
     	global.expect = chai.expect;
     	chai.Should();
+      chai.config.includeStack = true;
 
       //global variables
       global.globalPassword = 'Testpass135!';

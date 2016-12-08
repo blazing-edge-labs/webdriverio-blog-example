@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "WebdriverIO Blog Example",
   "scripts": {
-    "cleanup": "rm -rf ./allure-report && rm -rf ./errorShots",
+    "cleanup": "rm -rf ./allure-results && rm -rf ./allure-report && rm -rf ./errorShots",
     "pretest": "npm run cleanup",
     "test": "gulp test",
     "report": "./node_modules/.bin/allure generate allure-results",
@@ -24,7 +24,7 @@
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
-    "gulp-webdriver": "^2.0.2",
+    "gulp-webdriver": "latest",
     "lodash": "^4.17.0",
     "mocha": "^3.1.2",
     "selenium-standalone": "^5.8.0",
@@ -37,5 +37,14 @@
   },
   "babel": {
     "presets": ["es2015"]
-  }
+  },
+"keywords": [
+    "selenium",
+    "webdriverio",
+    "mocha",
+    "chai",
+    "nodejs",
+    "test boilerplate",
+    "allure"
+  ]
 }
