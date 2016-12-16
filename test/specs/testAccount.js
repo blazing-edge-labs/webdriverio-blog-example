@@ -1,5 +1,4 @@
 'use strict';
-
 import account from '../helpers/account.js';
 
 suite('Test the Login Functionality using helper functions - ', () => {

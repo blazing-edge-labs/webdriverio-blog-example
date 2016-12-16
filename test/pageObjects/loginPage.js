@@ -24,7 +24,7 @@ var LoginPage = Object.create(Page, {
    } },
 
    open: { value: function() {
-      Page.open.call(this, '/home/login');
+      Page.open.call(this, '/login/home');
    } },
 
    loginClick: { value: function() {

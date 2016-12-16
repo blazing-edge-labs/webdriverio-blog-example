@@ -1,5 +1,4 @@
 exports.config = {
-
     //
     // ==================
     // Specify Test Files
@@ -103,7 +102,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    //services: ['selenium-standalone'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -134,10 +133,12 @@ exports.config = {
     // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
     // resolved to continue.
     //
-    // Gets executed once before all workers get launched.
-    // onPrepare: function (config, capabilities) {
-    // },
-    //
+   //  Gets executed once before all workers get launched.
+   //  onPrepare: function (config, capabilities) {
+   //    global.host: 'localhost', // Use localhost as chrome driver server
+   //    global.port: 9515
+   //  },
+
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
     before: function (capabilities, specs) {

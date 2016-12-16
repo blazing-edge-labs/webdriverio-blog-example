@@ -13,7 +13,7 @@ suite('Test Login Functionality using Page Objects - ', () => {
       LoginPage.loginClick();
       browser.waitForVisible('.alert-error');
 
-      LoginPage.loginError.getText().should.contain('Your email address, handle'
+      LoginPage.loginError.getText().should.contain('Your email address, handle,'
          + ' or password is incorrect. Please try again.');
    });
 

@@ -1,0 +1,4 @@
+general:
+  artifacts:
+    - "allure-report"
+    - "allure-results"
