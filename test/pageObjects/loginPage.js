@@ -1,27 +1,21 @@
 'use strict';
 
-var Page = require('./page');
+import pageElement from '../helpers/pageElement.js';
 
+var Page = require('./page');
 var LoginPage = Object.create(Page, {
 
-   username: { get: function () {
-      return browser.element('#inputEmailHandle');
-   } },
-   password: { get: function () {
-      return browser.element('#inputPassword');
-   } },
-   loginButton: { get: function () {
-      return browser.element('button=Log in');
-   } },
-   createAccount: { get: function () {
-      return browser.element('button=Create account');
-   } },
-   loginError: { get: function () {
-      return browser.element('.alert-error');
-   } },
-   confirmLogin: { get: function() {
-      return browser.element('#searchlegend');
-   } },
+   username: pageElement('#inputEmailHandle'),
+
+   password: pageElement('#inputPassword'),
+
+   loginButton: pageElement('button=Log in');
+
+   createAccount: pageElement('button=Create account');
+
+   loginError: pageElement('.alert-error');
+
+   confirmLogin: pageElement('#searchlegend');
 
    open: { value: function() {
       Page.open.call(this, '/login/home');
