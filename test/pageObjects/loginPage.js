@@ -9,13 +9,13 @@ var LoginPage = Object.create(Page, {
 
    password: pageElement('#inputPassword'),
 
-   loginButton: pageElement('button=Log in');
+   loginButton: pageElement('button=Log in'),
 
-   createAccount: pageElement('button=Create account');
+   createAccount: pageElement('button=Create account'),
 
-   loginError: pageElement('.alert-error');
+   loginError: pageElement('.alert-error'),
 
-   confirmLogin: pageElement('#searchlegend');
+   confirmLogin: pageElement('#searchlegend'),
 
    open: { value: function() {
       Page.open.call(this, '/login/home');
