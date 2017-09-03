@@ -5,7 +5,7 @@
 
 This repo serves as a companion to a [blog post where I explain why I love WebdriverIO](https://blog.eastcoastproduct.com/webdriverio-why-and-how-to-use-it-for-testing) and contains several examples that I discussed in the blog post. These examples show how to set up and utilize [WebdriverIO](http://webdriver.io/) using [Mocha](https://mochajs.org/), [Gulp](http://gulpjs.com/) and [Chai](http://chaijs.com/) for automated checking of the [craigslist](https://boston.craigslist.org/) classifieds page. I will be continuously updating this and keep adding more examples as I explore more of WebdriverIO’s functionalities I haven't had a chance to use before.
 
-##Environment setup
+## Environment setup
 
 First, you need to install [Node.js](https://nodejs.org/en/).
 
@@ -26,7 +26,7 @@ npm install -g gulp
 ```
 and the environment is set up!
 
-##Setting up the configuration file
+## Setting up the configuration file
 
 If you've cloned the repo, then you have my *wdio.conf.js* and you don't need to set it up. If you want to customize the configuration file, type
 ```
@@ -34,11 +34,11 @@ wdio config
 ```
 into the command line and answer the questions about your project.
 
-##Running the scripts
+## Running the scripts
 
 Type ```gulp test``` in the project folder command line to start the automated checking scripts.
 
-###package.json file
+### package.json file
 
 One cool thing I learned while setting up this repo is the npm's feature that any script has a set of pre- and post- hooks. I've used them in a way that when ```npm test``` is executed, npm will immediately run the ```npm pretest``` script, run the ```npm test``` and, finally, the ```npm run posttest```. You can see them in the *package.json* file, under ```"scripts"```:
 
